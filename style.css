@@ -1,0 +1,145 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+.sidebar {
+	font-family: sans-serif;
+	position: fixed;
+	left: -250px;
+	width: 250px;
+	height: 100%;
+	background: #042331;
+}
+.sidebar header{
+	text-align: center;
+	font-size: 24px;
+	color: white;
+	line-height: 70px;
+	background: #063146;
+	user-select: none;
+}
+.sidebar ul a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	font-size: 20px;
+	padding-left: 40px;
+	line-height: 65px;
+	color: white;
+	box-sizing: border-box;
+	border-top: 1px solid rgba(255, 255, 255, .1);
+	border-bottom: 1px solid black;
+	transition: .4s;
+}
+.sidebar ul li a:hover {
+	padding-left: 50px;
+}
+.sidebar ul li a i {
+	margin-right: 15px;
+}
+#check {
+	display: none;
+}
+label #btn,label #cancel {
+	position: absolute;
+	cursor: pointer;
+	background: #042331;
+	border-radius: 4px;
+}
+label #btn {
+	left: 40px;
+	top: 25px;
+	font-size: 35px;
+	color: white;
+	padding: 6px 12px;
+	transition: all .5s ease;
+}
+label #cancel {
+	z-index: 1111;
+	left: -195px;
+	top: 17px;
+	font-size: 30px;
+	color: #a5c2d3;
+	padding: 4px 9px;
+	transition: all .5s ease;
+}
+#check:checked ~ .sidebar {
+	left: 0;
+}
+#check:checked ~ label #btn{
+	left: 250px;
+	opacity: 0;
+	pointer-events: none;
+}
+#check:checked ~ label #cancel {
+	left: 195px;
+}
+#check:checked ~ section {
+	margin-left: 250px;
+}
+section {
+	background: url(laptop4.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+	transition: all 0.5s ease;
+}
+.icon {
+	font-family: sans-serif;
+	position: absolute;
+	top: 25px;
+    right: 35px;
+	background: black;
+    padding: 5px 4px 7px 4px;
+    justify-content: center;
+    align-items: center;
+}
+.icon ul{
+	display: flex;
+	font-size: 24px;
+	user-select: none;
+}
+.icon ul a {
+	color: white;
+	padding: 10px;
+	margin: 15px;
+	text-transform: capitalize;
+	transition: .5s ease;
+}
+.icon ul a i {
+	padding-right: 10px;
+	color: blue;
+	font-size: 35px;
+}
+.icon ul a:hover {
+	cursor: pointer;
+	color: blueviolet;
+}
+.main {
+	position: absolute;
+    left: 325px;
+    top: 190px;
+    right: 40px;
+    background: rgba(0,0,0,0.7);
+    color: cornsilk;
+    overflow: hidden;
+}
+.main h1 {
+	color: chartreuse;
+	font-size: 54px;
+	line-height: 55px;
+	letter-spacing: 1.2px;
+	padding: 30px;
+}
+.main p{ 
+	font-family: serif;
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 3.2px;
+	padding: 16px 70px;	
+}
+.main strong {
+	color: orangered;
+}
